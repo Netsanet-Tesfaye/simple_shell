@@ -1,15 +1,24 @@
-#include "read_line.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h> /* Include the <string.h> header to fix the error */
+#include "shell.h"
 
-ssize_t read_line(char *buffer, size_t bufsize)
+char *read_line(void)
 {
-    if (getline(&buffer, &bufsize, stdin) == -1)
-        return -1;
+    char *line = NULL;
+    size_t bufsize = 0;
 
-    buffer[strcspn(buffer, "\n")] = '\0';
+    if (getline(&line, &bufsize, stdin) == -1)
+    {
+        if (feof(stdin))
+        {
+            write(STDOUT_FILENO, "\n", 1);
+            exit(EXIT_SUCCESS);
+        }
+        else
+        {
+            perror("read_line");
+            exit(EXIT_FAILURE);
+        }
+    }
 
-    return bufsize;
+    return line;
 }
 
