@@ -1,6 +1,5 @@
 #include "path2.h"
 #include "string_utils.h"
-
 #include <string.h>
 
 /**
