@@ -12,6 +12,8 @@
 #include <dirent.h>
 #include <stddef.h> /* For size_t and NULL */
 
+#define BUFFER_SIZE 1024
+
 /* Function Prototypes */
 void print_prompt(void);
 char *read_line(void);
@@ -27,6 +29,8 @@ size_t _strlen(const char *str);
 int shell(void);
 void init_shell(void);
 int main(int argc, char *argv[]);
+void shell(void);
+int shell_entry_point(void);
 
 
 #endif /* SHELL_H */
