@@ -74,7 +74,7 @@ int main(void)
                 /* Check if it's the "env" built-in command */
                 if (strcmp(args[0], "env") == 0)
                 {
-                        _env();
+                       print_env();
                         continue; /* Skip the fork and execve steps */
                 }
 
@@ -85,3 +85,4 @@ int main(void)
         return (0);
 }
 }
+

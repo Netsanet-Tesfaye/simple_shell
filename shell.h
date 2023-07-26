@@ -21,15 +21,13 @@ char **split_line(char *line);
 int execute(char **args);
 void free_args(char **args);
 void handle_ctrl_c(int signal);
-int _env(void);
+int print_env(void);
 char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, const char *src);
 int _strcmp(const char *str1, const char *str2);
 size_t _strlen(const char *str);
 int shell(void);
 void init_shell(void);
-int main(int argc, char *argv[]);
-void shell(void);
 int shell_entry_point(void);
 
 

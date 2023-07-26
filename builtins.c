@@ -10,7 +10,7 @@
  *
  * Return: Always returns 0.
  */
-int _env(void)
+int print_env(void)
 {
 	int i;
 

@@ -6,7 +6,7 @@
  * Return: no return.
  */
 
-void shell(void)
+int shell(void)
 {
 	char input[BUFFER_SIZE];
 
@@ -29,17 +29,6 @@ void shell(void)
 	 }
 
 	 write(STDOUT_FILENO, "\n", 1);
-}
 
-/**
- * shell_entry_point - name of the function.
- *
- * Return: 0 - successful
- * non-zero value - error(unsuccess).
- */
-
-int shell_entry_point(void)
-{
-	shell();
 	return (0);
 }
