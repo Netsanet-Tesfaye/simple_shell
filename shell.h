@@ -21,7 +21,6 @@ char **split_line(char *line);
 int execute(char **args);
 void free_args(char **args);
 void handle_ctrl_c(int signal);
-int print_env(void);
 char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, const char *src);
 int _strcmp(const char *str1, const char *str2);
