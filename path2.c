@@ -1,6 +1,8 @@
-#include "path2.h"
+#include "shell.h"
 #include "string_utils.h"
 #include <string.h>
+
+#define MAX_PATH_LENGTH 1024
 
 /**
  * shell - name of function.
